@@ -1,6 +1,7 @@
 <?php
 
-function university_post_types() {
+function university_post_types()
+{
   // Campus Post Type
   register_post_type('campus', array(
     'capability_type' => 'campus',
@@ -19,7 +20,7 @@ function university_post_types() {
     ),
     'menu_icon' => 'dashicons-location-alt'
   ));
-  
+
   // Event Post Type
   register_post_type('event', array(
     'capability_type' => 'event',
@@ -59,7 +60,7 @@ function university_post_types() {
   // Professor Post Type
   register_post_type('professor', array(
     'show_in_rest' => true,
-    'supports' => array('title', 'editor', 'thumbnail'),
+    'supports' => array('title', 'editor', 'thumbnail', 'custom-fields'),
     'public' => true,
     'labels' => array(
       'name' => 'Professors',
